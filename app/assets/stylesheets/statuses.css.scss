@@ -9,4 +9,17 @@
 	line-height: 1.45;
 	background-color: #f7f7f7;
 	border-radius: 3px;
+	border: 1px solid #000000;
 }
+.status.hover  {
+	background-color: #FFFEF6;
+	border: 1px solid #cccccc;
+}
+.status .admin {
+	display: none;
+}
+
+.status.hover .admin {
+	display: inline;
+}
+
