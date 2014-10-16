@@ -24,20 +24,22 @@
         <%= link_to 'Sign up', new_user_registration_path %>
       </li>
       <li class="divider"></li>
-      
       <li>
         <%= link_to 'Sign in', new_user_session_path %>
       </li>            
       <li class="divider"></li>
-      
-      <li>
-        <%= link_to 'Sign out', destroy_user_session_path %>
-      </li>            
+      <li class="has-dropdown">
+      <a href="">My Profile</a>
+        <ul class="dropdown">
+          <li><%= link_to 'Update Profile', edit_user_registration_path %></li>
+          <li><%= link_to 'Sign out', destroy_user_session_path %></li>
+        </ul>
+      </li>
       <li class="divider"></li>
-      
       <li class="has-form">
         <%= link_to 'Update my status', new_status_path, class: "small button" %>
     </li>
   </ul>
   </section>
 </nav>
+
