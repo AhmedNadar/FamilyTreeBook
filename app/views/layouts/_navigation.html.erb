@@ -1,0 +1,43 @@
+<nav class="top-bar" data-topbar role="navigation">
+  <!-- Left Nav Section -->
+  <ul class="title-area">
+    <li class="name">
+      <h1><%= link_to 'Family Tree Book', root_path %></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->  
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li>
+        <%= link_to 'Home', root_path %>
+      </li>
+      <li class="divider"></li>
+      
+      <li>
+        <%= link_to 'About', root_path %>
+      </li>
+      <li class="divider"></li>
+
+      <li>
+        <%= link_to 'Sign up', new_user_registration_path %>
+      </li>
+      <li class="divider"></li>
+      
+      <li>
+        <%= link_to 'Sign in', new_user_session_path %>
+      </li>            
+      <li class="divider"></li>
+      
+      <li>
+        <%= link_to 'Sign out', destroy_user_session_path %>
+      </li>            
+      <li class="divider"></li>
+      
+      <li class="has-form">
+        <%= link_to 'Update my status', new_status_path, class: "small button" %>
+    </li>
+  </ul>
+  </section>
+</nav>

@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'foundation-rails'
-gem 'font-awesome-sass'
+gem 'font-awesome-rails'
 gem 'simple_form'
 gem 'devise'
 

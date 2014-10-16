@@ -1,21 +1,22 @@
-<h1>All of the statuses</h1>
-<%= link_to 'Post a new status', new_status_path, class: "button radius expand" %>
+<div class="row">
+  <h1>All of the statuses</h1>
+  <%= link_to 'Post a new status', new_status_path, class: "button radius" %>
 
-<% @statuses.each do |status| %>
-<div class="status">
-    <ul>
-      <li><strong><%= status.name %></strong> <em>wrote: </em></li> 
-    </ul>
-    <p><%= status.content %></p>
-    <div class="meta">
-      <%= link_to time_ago_in_words(status.created_at) + " ago.", status %>
-      <span class="admin">
-        |  <%= link_to "Edit", edit_status_path(status) %> |
-        <%= link_to "Delete", status, method: :delete, data: {confirm: "Are you sure?"}  %>
-      </span>
+  <% @statuses.each do |status| %>
+  <div class="status">
+      <ul>
+        <li><strong><%= status.name %></strong> <em>wrote: </em></li> 
+      </ul>
+      <p><%= status.content %></p>
+      <div class="meta">
+        <%= link_to time_ago_in_words(status.created_at) + " ago.", status %>
+        <span class="admin">
+          |  <%= link_to " Edit ", edit_status_path(status), class: "fa fa-pencil-square-o" %> |
+          <%= link_to " Delete ", status, class: "fa fa-times", method: :delete, data: {confirm: "Are you sure?"}  %>
+        </span>
+      </div>
     </div>
-  </div>
-<% end %>
-<br>
+  <% end %>
+</div>
 
 
