@@ -1,4 +1,12 @@
-<div class="medium-2 columns">
-  <p>Welcome to, <br>
-  		Family Tree Book! </p>
+<div class="medium-3 columns">
+  <div class="panel" data-equalizer-watch="" style="height: 295px;">
+	  <p>Welcome 
+	  	<% if user_signed_in? %>
+	  		<span><strong><%= current_user.full_name %></strong> </span>
+	  	<% else %>
+				<span>Guest!</span>
+				<% end %>
+	  		to <br>
+	  		The Family Tree Book! </p>
+	</div>
 </div>
