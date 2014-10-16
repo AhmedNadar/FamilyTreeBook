@@ -1,28 +1,31 @@
-<%= simple_form_for(@status) do |f| %>
-
-  <% if @status.errors.any? %>
-    <div class="row">
-      <div id="error_explanation">
-      <h2><%= pluralize(@status.errors.count, "error") %> prohibited this status from being saved:</h2>
-      <ul>
-      <% @status.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+<div class="row">
+  <div class="large-8 columns">
+    <%= simple_form_for(@status) do |f| %>
+      <% if @status.errors.any? %>
+        <div class="row">
+          <div id="error_explanation">
+          <h2><%= pluralize(@status.errors.count, "error") %> prohibited this status from being saved:</h2>
+          <ul>
+          <% @status.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+          </div>
+        </div> 
       <% end %>
-      </ul>
+    <div class="row">
+      <div class="form_inputs large-12 columns">
+        <%#= f.input_field :user_id, as: :string, placeholder: "Profile name",required: true, autofocus: true %>
+        <%= f.input_field :user_id, collection: User.all, label_method: :full_name %><br>
+        <%= f.input_field :content, as: :text, placeholder: "Add your status" %><br>
       </div>
-    </div> 
-  <% end %>
-
-  <div class="row">
-    <div class="form_inputs large-12 columns">
-      <%= f.input :user_id %><br>
-      <%= f.input_field :content, as: :text, placeholder: "Add your status" %><br>
     </div>
-  </div>
 
-  <div class="row">
-    <div class="form_actions large-12 columns">
-      <%= f.button :submit, class: "medium button green" %>
+    <div class="row">
+      <div class="form_actions large-12 columns">
+        <%= f.button :submit, class: "medium button green round" %>
+      </div>
     </div>
+    <% end %>
   </div>
-<% end %>
+</div>  

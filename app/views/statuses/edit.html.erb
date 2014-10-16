@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @status %> |
-<%= link_to 'Back', statuses_path %>
+<ul class="button-group radius">
+	<li><%= link_to 'Show Status', @status, class: "button success tiny" %></li>
+	<li><%= link_to 'All Statuses', statuses_path, class: "button secondary tiny" %></li>
+</ul>
