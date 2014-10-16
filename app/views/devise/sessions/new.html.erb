@@ -1,18 +1,31 @@
-<h2>Log in</h2>
+<div class="large-8 columns signup">
+  <nav class="tab-bar">
+    <section class="left-small">
+      <i class="fa fa-sign-in fa-5"></i>
+    </section>
+    <section class="middle tab-bar-section">
+      <h1 class="title">Sign in</h1>
+    </section>
+  </nav>
 
-<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="form-inputs">
-    <%= f.input :first_name, required: false, autofocus: true %>
-    <%= f.input :last_name, required: false %>
-    <%= f.input :profile_name, required: false %>
-    <%= f.input :email, required: false %>
-    <%= f.input :password, required: false %>
-    <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-  </div>
+<div class="panel callout radius">
+	<div class="row">
+	  <div class="large-12 columns">
+			<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+			  <div class="form-inputs">
+				  <%= f.input_field :profile_name, as: :string, placeholder: "Profile name",required: true, autofocus: true %>
+				  <%= f.input_field :email, as: :email, placeholder: "Email",required: true %>
+				  <%= f.input_field :password, as: :password, placeholder: "Password", required: true%>
+				  <%= f.input_field :remember_me, as: :boolean if devise_mapping.rememberable? %>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
-  </div>
-<% end %>
+			  </div>
 
-<%= render "devise/shared/links" %>
+			  <div class="form-actions">
+			    <%= f.button :submit, "Sign in", class: "button round" %>
+			  </div>
+			<% end %>
+		</div>
+		</div>
+		<%= render "devise/shared/links" %>
+	</div>
+</div>
