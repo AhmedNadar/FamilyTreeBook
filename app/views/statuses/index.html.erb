@@ -5,7 +5,7 @@
   <% @statuses.each do |status| %>
   <div class="status">
       <ul>
-        <li><strong><%= status.name %></strong> <em>wrote: </em></li> 
+        <li><strong><%= status.user.full_name %> </strong> <em>wrote: </em></li> 
       </ul>
       <p><%= status.content %></p>
       <div class="meta">

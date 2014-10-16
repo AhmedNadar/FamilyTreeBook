@@ -1,25 +1,28 @@
-<%= form_for(@status) do |f| %>
-  <% if @status.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@status.errors.count, "error") %> prohibited this status from being saved:</h2>
+<%= simple_form_for(@status) do |f| %>
 
+  <% if @status.errors.any? %>
+    <div class="row">
+      <div id="error_explanation">
+      <h2><%= pluralize(@status.errors.count, "error") %> prohibited this status from being saved:</h2>
       <ul>
       <% @status.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
-    </div>
+      </div>
+    </div> 
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+  <div class="row">
+    <div class="form_inputs large-12 columns">
+      <%= f.input :user_id %><br>
+      <%= f.input_field :content, as: :text, placeholder: "Add your status" %><br>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="row">
+    <div class="form_actions large-12 columns">
+      <%= f.button :submit, class: "medium button green" %>
+    </div>
   </div>
 <% end %>
