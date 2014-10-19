@@ -1,20 +1,18 @@
 <div class="row">
   <h1>All of the statuses</h1>
   <%= link_to 'Post a new status', new_status_path, class: "button round" %>
-
   <% @statuses.each do |status| %>
   <div class="status">
-      <ul>
-        <li><strong><%= status.user.full_name %> </strong> <em>wrote: </em></li> 
-      </ul>
-      <p><%= status.content %></p>
       <div class="meta">
+      <ul>
+        <li><strong><%= status.user.full_name %> </strong> wrote
         <%= link_to time_ago_in_words(status.created_at) + " ago.", status %>
         <span class="admin">
           |  <%= link_to " Edit ", edit_status_path(status), class: "fa fa-pencil-square-o secondary radius label" %> |
           <%= link_to " Delete ", status, class: "fa fa-times alert radius label", method: :delete, data: {confirm: "Are you sure?"}  %>
         </span>
       </div>
+      <p><%= status.content %></p>
     </div>
   <% end %>
 </div>
