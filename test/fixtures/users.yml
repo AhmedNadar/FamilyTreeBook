@@ -14,4 +14,5 @@ ahmed:
   first_name: "Ahmed"
   last_name: "Nadar"
   profile_name: "ahmed"
-  email: "ahmed@gmail.com"
+  email: "ahmed.nadar@mail.com"
+  encrypted_password: "password1"

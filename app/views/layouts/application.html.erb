@@ -3,26 +3,26 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
-
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
-
-  <body>
-    <div class="inner-wrap">
+  <body class="antialiased hide-extras" data-feedly-mini="yes">
+  <div class="marketing off-canvas-wrap" data-offcanvas="yes">
+   <div class="inner-wrap">
       <%= render 'layouts/navigation' %>
-      <div class="row">
-      <%= render 'layouts/left_column' %>
-        <div class="medium-9 columns">
-        <%= render 'layouts/flash_messages' %>
-          <%= yield %>
-        </div>
-      </div>
+      <section role="main" class="scroll-container">
+        <div class="row">
+          <%= render 'layouts/left_column' %>
+          <div class="large-9 medium-8 columns">
+            <%= render 'layouts/flash_messages' %>
+            <%= yield %>
+          </div><!-- end medium-9-->
+        </div><!-- end row-->
+      </section><!-- end section-->
       <%= render 'layouts/footer' %>
-    </div>
+    </div> <!-- end inner-wrap-->
     <%= javascript_include_tag "application" %>
   </body>
 </html>

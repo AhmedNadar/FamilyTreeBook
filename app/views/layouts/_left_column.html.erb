@@ -1,12 +1,27 @@
-<div class="medium-3 columns">
-  <div class="panel" data-equalizer-watch="" style="height: 295px;">
-	  <p>Welcome 
-	  	<% if user_signed_in? %>
-	  		<span><strong><%= current_user.full_name %></strong> </span>
-	  	<% else %>
-				<span>Guest!</span>
-				<% end %>
-	  		to <br>
-	  		The Family Tree Book! </p>
+<div class="large-3 medium-4 columns">
+  <div class="hide-for-small">
+    <div class="sidebar">
+    	<!-- <h5>The Family Tree Book</h5> -->
+    	<nav>
+    		<ul class="side-nav">
+	 			  <p>Welcome 
+				  	<% if user_signed_in? %>
+	  					<span><strong><%= current_user.full_name %></strong> </span>
+	  				<% else %>
+							<span>Guest!</span>
+						<% end %>
+						to <br>The Family Tree Book! </p>
+				  <nav>
+				    <ul class="side-nav">
+				      <li class="heading">Signed Users</li>
+				      <% User.select do |user| %>
+				      	<li>- <%= user.full_name %></li>
+				      <% end %>
+				    </ul>
+				  </nav>		
+    		</ul>
+    	</nav>
+
+		</div>
 	</div>
 </div>
