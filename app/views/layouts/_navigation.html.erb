@@ -4,6 +4,9 @@
     <li class="name">
       <h1><%= link_to 'Family Tree Book', root_path %></h1>
     </li>
+    <li>
+      
+    </li>
   </ul>
   <section class="top-bar-section">
     <!-- Right Nav Section -->
@@ -16,8 +19,8 @@
         <li class="has-dropdown">
           <%= link_to current_user.full_name %>
           <ul class="dropdown">
-            <li><%= link_to 'Update Profile', edit_user_registration_path %></li>
-            <li><%= link_to 'Sign out', destroy_user_session_path,method: :delete %></li>
+            <li><%= link_to 'Update Profile', settings_path %></li>
+            <li><%= link_to 'Sign out', logout_path %></li>
           </ul>
         </li>
         <li class="divider"></li>
@@ -26,14 +29,17 @@
         </li>
       <% else %>
         <li>
-          <%= link_to 'Sign up', new_user_registration_path %>
+          <%= link_to 'Sign up', join_path %>
         </li>
         <li class="divider"></li>
         <li>
-          <%= link_to 'Sign in', new_user_session_path %>
+          <%= link_to 'Sign in', login_path %>
         </li>            
         <li class="divider"></li>
       <% end %>
+    </ul>
+    <ul class="left show-for-large-up">
+      <li><%= link_to 'Feeds', feeds_path  %></li>
     </ul>
   </section>
 </nav>
