@@ -10,5 +10,5 @@ Rails.application.routes.draw do
 
   resources :statuses
   get "feeds", to: "statuses#index", as: :feeds
-  root to: "statuses#index"
+  root "statuses#index"
 end
