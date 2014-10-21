@@ -7,13 +7,13 @@
 	overflow: auto;
 	font-size: 85%;
 	line-height: 1.45;
-	background-color: #f7f7f7;
+	background-color: #F5F5F5;
 	border-radius: 3px;
-	border: 1px solid #000000;
+	// border: 1px solid #000000;
 }
 .status.hover  {
-	background-color: #FFFEF6;
-	border: 1px solid #cccccc;
+	background-color: #E7F6F7;
+	// border: 1px solid #cccccc;
 }
 .status .admin {
 	display: none;
@@ -86,3 +86,169 @@
           background-position: center -200px; }
         .zurb-footer-bottom ul.home-social li a.mail {
           background-position: center -400px; }
+
+// index page
+.post-count-spacing {
+margin: 0;
+}
+
+.post-count-spacing > li:first-child {
+  margin-bottom: 10px;
+  padding-bottom: 0;
+  width: 95px; }
+  @media only screen and (min-width: 40.063em) {
+    .post-count-spacing > li:first-child {
+      padding-left: 0; } }
+  @media only screen and (min-width: 40.063em) {
+    .post-count-spacing > li:first-child {
+      width: 105px; } }
+  .post-count-spacing > li:first-child form {
+    margin-bottom: 0 !important; }
+.post-count-spacing > li:last-child {
+  padding-bottom: 0;
+  line-height: 1.2em;
+  padding-left: 0.55556rem;
+  width: 65%; }
+  @media screen and (min-width: 550px) and (max-width: 767px) {
+    .post-count-spacing > li:last-child {
+      width: 70% !important; } }
+  @media screen and (min-width: 767px) and (max-width: 850px) {
+    .post-count-spacing > li:last-child {
+      width: 73% !important; } }
+  @media screen and (min-width: 851px) and (max-width: 1999px) {
+    .post-count-spacing > li:last-child {
+      width: 75% !important; } }
+  @media screen and (min-width: 1200px) {
+    .post-count-spacing > li:last-child {
+      width: 80% !important;
+      padding-left: 0.83333rem; } }
+
+.post-count {
+  width: 80px !important;
+  height: 80px;
+  border: none !important;
+  background-color: #e6e6e6;
+  text-align: center; }
+  @media only screen and (min-width: 40.063em) {
+    .post-count {
+      width: 95px !important; } }
+  .post-count.new-general {
+    background-color: #074e68;
+    color: #d8f3fc; }
+  .post-count.old-general {
+    background-color: #f2f2f2 !important; }
+  .post-count .post-count-container {
+    height: 50px;
+    background-color: #f2f2f2; }
+    .post-count .post-count-container.old-general {
+      background-color: #f2f2f2 !important; }
+    .post-count .post-count-container.new {
+      background-color: #074e68;
+      color: #d8f3fc; }
+    .post-count .post-count-container.new-general {
+      background-color: #074e68;
+      color: #d8f3fc; }
+    .post-count .post-count-container span.reply-count {
+      position: relative;
+      top: 4px;
+      color: #666666;
+      font-family: "Proxima", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 1.75em;
+      font-weight: 700; }
+      .post-count .post-count-container span.reply-count.old-general {
+        background-color: #f2f2f2 !important;
+        top: 18px;
+        font-size: 1.75em; }
+      .post-count .post-count-container span.reply-count.new-general {
+        top: 18px;
+        color: #d8f3fc;
+        font-size: 1.75em; }
+        .post-count .post-count-container span.reply-count.new-general.with-replies {
+          top: 6px; }
+      .post-count .post-count-container span.reply-count.new-post {
+        color: #d8f3fc;
+        top: 6px; }
+        .post-count .post-count-container span.reply-count.new-post.already-checked {
+          top: 0.2em !important; }
+    .post-count .post-count-container .label {
+      display: block;
+      background-color: transparent !important;
+      text-transform: uppercase;
+      font-family: "Proxima", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      color: #78d4f6;
+      position: relative;
+      top: -0.83333rem; }
+  .post-count .total-post-count {
+    height: 30px;
+    font-family: "Proxima", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: gray;
+    font-size: 0.61111rem;
+    text-transform: uppercase;
+    padding: 8px 3px 3px 3px;
+    font-weight: 700; }
+    .post-count .total-post-count.total-replies {
+      color: gray; }
+      .post-count .total-post-count.total-replies.new {
+        background-color: #053c50;
+        color: #d8f3fc; }
+
+@media only screen and (min-width: 40.063em) {
+  .post-count-spacing {
+    margin: 0; } }
+.post-count-spacing .post-description {
+  margin-top: 10px !important; }
+  @media only screen and (min-width: 40.063em) {
+    .post-count-spacing .post-description {
+      margin-top: 0 !important; } }
+.post-count-spacing .author-name {
+  margin-top: 5px;
+  line-height: 23px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  font-size: 11px; }
+  // .post-count-spacing .author-name a {
+  //   color: #000000 !important; }
+  //   .post-count-spacing .author-name a:hover {
+  //     color: gray !important; }
+.post-count-spacing .last-reply-by a {
+  color: #8c8c8c; }
+.post-count-spacing h5 {
+  line-height: 1em;
+  margin-bottom: 5px;
+  margin-top: -4px;
+  font-size: 18px !important; }
+  @media only screen and (min-width: 40.063em) {
+    .post-count-spacing h5 {
+      font-size: 1.5em !important;
+      margin-top: -2px; } }
+.post-count-spacing p {
+  margin-bottom: 0; }
+.post-count-spacing p.moderator-links {
+  margin-top: 5px;
+  margin-bottom: 5px; }
+.post-count-spacing p.tags {
+  margin-top: 2px !important;
+  margin-bottom: 5px !important;
+  line-height: 28px; }
+  @media screen and (min-width: 767px) {
+    .post-count-spacing p.tags a {
+      margin: 0 0.27778rem 0.83333rem 0 !important; } }
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    .post-count-spacing p.tags a {
+      margin: 0.83333rem 0.27778rem 0.83333rem 0 !important; } }
+.post-count-spacing span.when {
+  color: #a6a6a6; }
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    .post-count-spacing span.when {
+      margin-top: 0.83333rem; } }
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    .post-count-spacing span.when {
+      font-family: "Proxima", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-weight: 400;
+      color: #666666;
+      font-size: 0.72222rem; } }
+
+.row.posts .row.post.impressions.old a {
+  color: #999999; }
+.row.posts .row.post.impressions hr {
+  margin: 1.25em 0 1.1875em; }
