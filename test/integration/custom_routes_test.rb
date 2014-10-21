@@ -17,11 +17,15 @@ class CustomRoutesTest < ActionDispatch::IntegrationTest
     assert_redirected_to root_path
   end
 
-  test "that /settings routes opens the settings page" do
-    get settings_path
+  test "that /profile routes opens the settings page" do
+    get profile_path
     assert_response :redirect
     get login_path
     assert_response :success
   end
 
+  test "that a profile page works" do
+    get '/ahmed'
+    assert_response :success
+  end
 end
