@@ -16,3 +16,10 @@ ahmed:
   profile_name: "ahmed"
   email: "ahmed.nadar@mail.com"
   encrypted_password: "password1"
+
+bilal: 
+  first_name: "Bilal"
+  last_name: "Nadar"
+  profile_name: "ilal"
+  email: "bilal@mail.com"
+  encrypted_password: "password2"
