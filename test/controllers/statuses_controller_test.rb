@@ -11,7 +11,7 @@ class StatusesControllerTest < ActionController::TestCase
     assert_not_nil assigns(:statuses)
   end
 
-  test "should be redirected when not clogged in" do
+  test "should be redirected when not logged in" do
     get :new
     assert_response :redirect
     assert_redirected_to new_user_session_path
