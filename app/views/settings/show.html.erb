@@ -1,0 +1,15 @@
+<h1><%= @user.full_name  %></h1>
+<% if @statuses %>
+<h3>My Statuses</h3>
+	<% @statuses.each do |status| %>
+		<div class="medium-12 columns">
+	    <div class="callout panel" data-equalizer-watch="" style="width: 100%;">
+	      <ul>
+	         <li><%= status.content %> <br> 
+							<em><%= link_to time_ago_in_words(status.created_at), status_path(status) %> ago</em>
+	         </li>
+	      </ul>
+	    </div>
+	  </div>
+	<% end %>
+<% end %>
